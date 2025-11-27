@@ -1,4 +1,15 @@
-# primeros-alimentos
+
+# Clavinia Baby tools
+
+Projects I do and share as a mom to make our lifes easier ❤
+
+---
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T11ORRKJ)
+
+
+---
+
+# Tabla de Primeros Alimentos / First Foods table
 
 This template should help get you started developing with Vue 3 in Vite.
 
