@@ -254,16 +254,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative min-h-screen bg-slate-100 py-8 px-8 print:py-0 print:px-0 print:w-[297mm] print:h-[210mm] print:min-h-0 print:overflow-hidden">
+  <div class="relative min-h-screen bg-slate-100 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-8 print:py-0 print:px-0 print:w-[297mm] print:h-[210mm] print:min-h-0 print:overflow-hidden">
     <!-- Botón flotante de imprimir -->
     <button
       @click="printPage"
-      class="fixed bottom-6 right-6 z-50 rounded-full bg-purple-600 p-4 text-white shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 print:hidden"
+      class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 rounded-full bg-purple-600 p-3 sm:p-4 text-white shadow-lg transition hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 print:hidden"
       aria-label="Imprimir"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
+        class="h-5 w-5 sm:h-6 sm:w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -278,15 +278,15 @@ onMounted(() => {
     </button>
 
     <!-- Header -->
-    <header class="mx-auto w-full max-w-[1400px] mb-8 print:hidden px-8">
+    <header class="mx-auto w-full max-w-[1400px] mb-4 sm:mb-6 md:mb-8 print:hidden px-4 sm:px-6 md:px-8">
       <div class="text-left">
-        <h1 class="text-center text-3xl font-bold text-slate-800 mb-6">Primeros Alimentos del bebé</h1>
-        <p class="text-sm text-slate-600 max-w-[1400px] mx-auto mb-3">
+        <h1 class="text-center text-2xl sm:text-3xl font-bold text-slate-800 mb-4 sm:mb-6">Primeros Alimentos del bebé</h1>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-[1400px] mx-auto mb-2 sm:mb-3">
           Esta herramienta te ayuda a documentar y hacer seguimiento de los primeros alimentos que introduces a tu bebé. 
           ¡Es muy fácil de usar! Simplemente ve marcando cada día la comida que le das.
           Un alimento se considera aceptado tu peque lo consume con cierto éxito al menos 5 veces. 
         </p>
-        <p class="text-xs text-slate-600 max-w-[1400px] mx-auto">
+        <p class="text-[10px] sm:text-xs text-slate-600 max-w-[1400px] mx-auto">
           <strong>Aviso:</strong> los datos que anotes en esta web se guardan en tu navegador y no se envían a ningún servidor, lo que significa que cuando cambies de dispositivo o navegador, los datos se perderán, pero también puedes imprimir el tablón para llevarlo siempre contigo.
         </p>
       </div>
@@ -295,14 +295,18 @@ onMounted(() => {
     <main class="mx-auto w-full max-w-[1400px] print:max-w-[297mm] print:w-[297mm] print:mx-0">
       <section
         id="printable-board"
-        class="rounded-2xl bg-white p-8 shadow-board ring-1 ring-slate-100 print:rounded-none print:shadow-none print:ring-0 print:p-1 print:w-[297mm] print:min-h-[210mm] print:max-h-[210mm] print:h-[210mm]"
+        class="rounded-2xl bg-white p-4 sm:p-6 md:p-8 shadow-board ring-1 ring-slate-100 print:rounded-none print:shadow-none print:ring-0 print:p-1 print:w-[297mm] print:min-h-[210mm] print:max-h-[210mm] print:h-[210mm] relative"
       >
+        <!-- Watermark - solo visible en impresión -->
+        <div class="hidden print:block absolute bottom-1 left-1 text-[8px] text-slate-300 font-light italic z-0 pointer-events-none">
+          Hecho con amor por Clavinia
+        </div>
         <!-- Grid principal: Layout horizontal con múltiples columnas -->
-        <div class="grid grid-cols-4 gap-4 print:gap-1 items-start">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 print:grid-cols-4 print:gap-1 items-start">
           <!-- Columna 1: Header, Alérgenos y Otros Sabores apilados -->
-          <div class="flex flex-col gap-4 print:gap-1 self-start">
+          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
             <!-- Header -->
-            <div class="rounded-xl border border-slate-200 p-4 print:p-1 text-center">
+            <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1 text-center">
               <p class="text-xs uppercase tracking-[0.6em] text-slate-400 print:text-[7px] print:tracking-wider">Primeros alimentos</p>
               <h1 class="mt-2 text-xl font-semibold text-slate-800 print:text-xs print:mt-0.5">Tablón del bebé</h1>
               <div class="mt-3 print:mt-2">
@@ -341,7 +345,7 @@ onMounted(() => {
               </p>
             </div>
             <!-- Alérgenos -->
-            <div class="rounded-xl border border-slate-200 p-4 print:p-1">
+            <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1">
               <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
                 <span class="text-lg print:text-[10px] leading-none">{{ alergenosSection.icon }}</span>
                 <span
@@ -357,7 +361,7 @@ onMounted(() => {
                   :key="item"
                   class="flex items-center justify-between gap-3 print:gap-1"
                 >
-                  <span class="text-xs font-medium text-slate-600 print:text-[7px]">{{ item }}</span>
+                  <span class="text-sm font-medium text-slate-600 print:text-[7px]">{{ item }}</span>
                   <div class="flex gap-1 shrink-0 print:gap-0.5">
                     <button
                       v-for="slot in exposureSlots"
@@ -378,7 +382,7 @@ onMounted(() => {
             </div>
 
             <!-- Otros Sabores -->
-            <div class="rounded-xl border border-slate-200 p-4 print:p-1">
+            <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1">
               <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
                 <span class="text-lg print:text-[10px] leading-none">{{ otrosSaboresSection.icon }}</span>
                 <span
@@ -394,7 +398,7 @@ onMounted(() => {
                   :key="item"
                   class="flex items-center justify-between gap-3 print:gap-1"
                 >
-                  <span class="text-xs font-medium text-slate-600 print:text-[7px]">{{ item }}</span>
+                  <span class="text-sm font-medium text-slate-600 print:text-[7px]">{{ item }}</span>
                   <div class="flex gap-1 shrink-0 print:gap-0.5">
                     <button
                       v-for="slot in exposureSlots"
@@ -416,7 +420,7 @@ onMounted(() => {
           </div>
 
           <!-- Columna 2: Frutas -->
-          <div class="rounded-xl border border-slate-200 p-4 print:p-1 self-start">
+          <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1 self-start">
             <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
               <span class="text-lg print:text-[10px] leading-none">{{ frutasSection.icon }}</span>
               <span
@@ -432,7 +436,7 @@ onMounted(() => {
                 :key="item"
                 class="flex items-center justify-between gap-3 print:gap-1"
               >
-                <span class="text-xs font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
                 <div class="flex gap-1 shrink-0 print:gap-0.5">
                   <button
                     v-for="slot in exposureSlots"
@@ -453,11 +457,11 @@ onMounted(() => {
           </div>
 
           <!-- Columna 3: Hidratos y Proteínas -->
-          <div class="flex flex-col gap-4 print:gap-1 self-start">
+          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
             <section
               v-for="section in mainSections.slice(1, 3)"
               :key="section.id"
-              class="rounded-xl border border-slate-200 p-4 print:p-1"
+              class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1"
             >
               <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
                 <span class="text-lg print:text-[10px] leading-none">{{ section.icon }}</span>
@@ -474,7 +478,7 @@ onMounted(() => {
                   :key="item"
                   class="flex items-center justify-between gap-3 print:gap-1"
                 >
-                  <span class="text-xs font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
                   <div class="flex gap-1 shrink-0 print:gap-0.5">
                     <button
                       v-for="slot in exposureSlots"
@@ -496,11 +500,11 @@ onMounted(() => {
           </div>
 
           <!-- Columna 4: Vegetales y Lácteos -->
-          <div class="flex flex-col gap-4 print:gap-1 self-start">
+          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
             <section
               v-for="section in mainSections.slice(3)"
               :key="section.id"
-              class="rounded-xl border border-slate-200 p-4 print:p-1"
+              class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1"
             >
               <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
                 <span class="text-lg print:text-[10px] leading-none">{{ section.icon }}</span>
@@ -517,7 +521,7 @@ onMounted(() => {
                   :key="item"
                   class="flex items-center justify-between gap-3 print:gap-1"
                 >
-                  <span class="text-xs font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
                   <div class="flex gap-1 shrink-0 print:gap-0.5">
                     <button
                       v-for="slot in exposureSlots"
@@ -542,7 +546,7 @@ onMounted(() => {
     </main>
 
     <!-- Footer -->
-    <footer class="mt-8 text-center text-sm text-slate-500 print:hidden">
+    <footer class="mt-4 sm:mt-6 md:mt-8 text-center text-xs sm:text-sm text-slate-500 print:hidden px-4">
       <p>Hecho con amor por <a href="https://cv.clavinia.eu" target="_blank" class="text-slate-800 hover:text-sky-600">Clavinia / Carmen L. Seva</a>, {{ currentYear }}. Todos los derechos reservados.</p> 
     </footer>
   </div>
