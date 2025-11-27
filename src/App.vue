@@ -222,6 +222,8 @@ const alergenosSection = computed(() => sideSections[0]!)
 const otrosSaboresSection = computed(() => sideSections[1]!)
 const frutasSection = computed(() => mainSections[0]!)
 
+const currentYear = new Date().getFullYear()
+
 const printPage = () => {
   // Asegurar que el nombre se muestre antes de imprimir
   isEditingName.value = false
@@ -274,6 +276,21 @@ onMounted(() => {
         />
       </svg>
     </button>
+
+    <!-- Header -->
+    <header class="mx-auto w-full max-w-[1400px] mb-8 print:hidden px-8">
+      <div class="text-left">
+        <h1 class="text-center text-3xl font-bold text-slate-800 mb-6">Primeros Alimentos del bebé</h1>
+        <p class="text-sm text-slate-600 max-w-[1400px] mx-auto mb-3">
+          Esta herramienta te ayuda a documentar y hacer seguimiento de los primeros alimentos que introduces a tu bebé. 
+          ¡Es muy fácil de usar! Simplemente ve marcando cada día la comida que le das.
+          Un alimento se considera aceptado tu peque lo consume con cierto éxito al menos 5 veces. 
+        </p>
+        <p class="text-xs text-slate-600 max-w-[1400px] mx-auto">
+          <strong>Aviso:</strong> los datos que anotes en esta web se guardan en tu navegador y no se envían a ningún servidor, lo que significa que cuando cambies de dispositivo o navegador, los datos se perderán, pero también puedes imprimir el tablón para llevarlo siempre contigo.
+        </p>
+      </div>
+    </header>
 
     <main class="mx-auto w-full max-w-[1400px] print:max-w-[297mm] print:w-[297mm] print:mx-0">
       <section
@@ -523,5 +540,10 @@ onMounted(() => {
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-sm text-slate-500 print:hidden">
+      <p>Hecho con amor por <a href="https://cv.clavinia.eu" target="_blank" class="text-slate-800 hover:text-sky-600">Clavinia / Carmen L. Seva</a>, {{ currentYear }}. Todos los derechos reservados.</p> 
+    </footer>
   </div>
 </template>
