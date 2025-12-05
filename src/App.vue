@@ -33,7 +33,7 @@ const sideSections: BoardSection[] = [
       badge: 'bg-rose-50 text-rose-700 border-rose-100',
       dot: 'bg-rose-500 border-rose-500',
     },
-    items: ['Huevos', 'Soja', 'Pescado', 'Mariscos', 'Kiwi', 'Sésamo', 'Leche', 'Nuez', 'Cacahuete', 'Trigo'],
+    items: ['Cacahuete', 'Huevos', 'Kiwi', 'Leche', 'Mariscos', 'Nuez', 'Pescado', 'Sésamo', 'Soja', 'Trigo'],
   },
   {
     id: 'otros-sabores',
@@ -57,72 +57,34 @@ const mainSections: BoardSection[] = [
       dot: 'bg-lime-500 border-lime-500',
     },
     items: [
-      'Manzana',
-      'Albaricoque',
       'Aguacate',
-      'Plátano',
-      'Banana',
-      'Zarzamora',
-      'Mora',
+      'Albaricoque',
       'Arándano',
-      'Higo',
-      'Uva',
-      'Kiwi',
-      'Limón',
-      'Lima',
-      'Mandarina',
-      'Mango',
-      'Melón',
-      'Nectarina',
-      'Naranja',
-      'Papaya',
-      'Melocotón',
-      'Pera',
-      'Piña',
-      'Ciruelo rojo',
+      'Banana',
       'Ciruelo morado',
+      'Ciruelo rojo',
       'Frambuesa',
       'Fresa',
-      'Uvas pasas',
+      'Higo',
+      'Kiwi',
+      'Lima',
+      'Limón',
+      'Mandarina',
+      'Mango',
+      'Manzana',
+      'Melocotón',
+      'Melón',
+      'Mora',
+      'Naranja',
+      'Nectarina',
+      'Papaya',
+      'Pera',
+      'Piña',
+      'Plátano',
       'Tomate',
-    ],
-  },
-  {
-    id: 'hidratos',
-    title: 'Hidratos',
-    icon: '🥖',
-    accent: {
-      badge: 'bg-amber-50 text-amber-700 border-amber-100',
-      dot: 'bg-amber-500 border-amber-500',
-    },
-    items: ['Cebada', 'Pan', 'Cuscús', 'Pan de molde', 'Avena', 'Pasta', 'Quinoa', 'Arroz', 'Pastel de arroz', 'Tortita'],
-  },
-  {
-    id: 'proteinas',
-    title: 'Proteína',
-    icon: '🥩',
-    accent: {
-      badge: 'bg-pink-50 text-pink-700 border-pink-100',
-      dot: 'bg-pink-500 border-pink-500',
-    },
-    items: [
-      'Mant. almendra',
-      'Alubias',
-      'Ternera',
-      'Pollo',
-      'Garbanzos',
-      'Huevo',
-      'Hummus',
-      'Cordero',
-      'Lentejas',
-      'Mant. cacahuete',
-      'Cerdo',
-      'Gambas',
-      'Salmón',
-      'Tofu',
-      'Atún',
-      'Pavo',
-      'Pescado blanco',
+      'Uva',
+      'Uvas pasas',
+      'Zarzamora',
     ],
   },
   {
@@ -134,29 +96,67 @@ const mainSections: BoardSection[] = [
       dot: 'bg-emerald-500 border-emerald-500',
     },
     items: [
-      'Espárragos',
-      'Remolacha',
-      'Brócoli',
-      'Pimiento',
-      'Col',
-      'Zanahoria',
-      'Coliflor',
-      'Apio',
-      'Maíz',
-      'Pepino',
-      'Berenjena',
       'Ajo',
-      'Judía verde',
-      'Champiñón',
-      'Cebolla',
-      'Zanahoria blanca',
-      'Guisantes',
-      'Patata',
-      'Calabaza',
-      'Espinacas',
+      'Apio',
       'Batata',
+      'Berenjena',
+      'Brócoli',
       'Calabacín',
+      'Calabaza',
+      'Cebolla',
+      'Champiñón',
+      'Col',
+      'Coliflor',
+      'Espárragos',
+      'Espinacas',
+      'Guisantes',
+      'Judía verde',
+      'Maíz',
+      'Patata',
+      'Pepino',
+      'Pimiento',
+      'Remolacha',
+      'Zanahoria',
+      'Zanahoria blanca',
     ],
+  },
+  {
+    id: 'proteinas',
+    title: 'Proteína',
+    icon: '🥩',
+    accent: {
+      badge: 'bg-pink-50 text-pink-700 border-pink-100',
+      dot: 'bg-pink-500 border-pink-500',
+    },
+    items: [
+      'Alubias',
+      'Atún',
+      'Cerdo',
+      'Cordero',
+      'Gambas',
+      'Garbanzos',
+      'Huevo',
+      'Hummus',
+      'Lentejas',
+      'Mant. almendra',
+      'Mant. cacahuete',
+      'Pavo',
+      'Pescado blanco',
+      'Pollo',
+      'Salmón',
+      'Ternera',
+      'Tofu',
+    ],
+  },
+  {
+    id: 'hidratos',
+    title: 'Hidratos',
+    icon: '🥖',
+    accent: {
+      badge: 'bg-amber-50 text-amber-700 border-amber-100',
+      dot: 'bg-amber-500 border-amber-500',
+    },
+    items: ['Arroz', 'Avena', 'Cebada', 'Cuscús', 'Pan', 'Pan de molde', 'Pasta', 'Pastel de arroz', 'Quinoa', 'Tortita'],
   },
   {
     id: 'lacteos',
@@ -166,7 +166,7 @@ const mainSections: BoardSection[] = [
       badge: 'bg-sky-50 text-sky-700 border-sky-100',
       dot: 'bg-sky-500 border-sky-500',
     },
-    items: ['Queso cheddar', 'Queso cottage', 'Q. parmesano', 'Natillas', 'Leche', 'Ricotta', 'Crema agria', 'Yogur'],
+    items: ['Crema agria', 'Leche', 'Natillas', 'Q. parmesano', 'Queso cheddar', 'Queso cottage', 'Ricotta', 'Yogur'],
   },
 ]
 
@@ -221,6 +221,10 @@ const toggleAttempt = (index: number) => {
 const alergenosSection = computed(() => sideSections[0]!)
 const otrosSaboresSection = computed(() => sideSections[1]!)
 const frutasSection = computed(() => mainSections[0]!)
+const vegetalesSection = computed(() => mainSections[1]!)
+const proteinasSection = computed(() => mainSections[2]!)
+const hidratosSection = computed(() => mainSections[3]!)
+const lacteosSection = computed(() => mainSections[4]!)
 
 const currentYear = new Date().getFullYear()
 
@@ -303,7 +307,7 @@ onMounted(() => {
         </div>
         <!-- Grid principal: Layout horizontal con múltiples columnas -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 print:grid-cols-4 print:gap-1 items-start">
-          <!-- Columna 1: Header, Alérgenos y Otros Sabores apilados -->
+          <!-- Columna 1: Header y Frutas -->
           <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
             <!-- Header -->
             <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1 text-center">
@@ -344,6 +348,165 @@ onMounted(() => {
                 Un alimento marcado 5 veces es considerado como un alimento aceptado.
               </p>
             </div>
+            <!-- Frutas -->
+            <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1">
+              <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
+                <span class="text-lg print:text-[10px] leading-none">{{ frutasSection.icon }}</span>
+                <span
+                  class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
+                  :class="frutasSection.accent.badge"
+                >
+                  {{ frutasSection.title }}
+                </span>
+              </div>
+              <ul class="space-y-2 print:space-y-0">
+                <li
+                  v-for="item in frutasSection.items"
+                  :key="item"
+                  class="flex items-center justify-between gap-3 print:gap-1"
+                >
+                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                  <div class="flex gap-1 shrink-0 print:gap-0.5">
+                    <button
+                      v-for="slot in exposureSlots"
+                      :key="`${frutasSection.id}-${item}-${slot}`"
+                      type="button"
+                      class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
+                      :class="[
+                        getFillCount(frutasSection.id, item) >= slot
+                          ? frutasSection.accent.dot
+                          : 'border-slate-200 bg-white hover:border-slate-400',
+                      ]"
+                      @click="toggleCircle(frutasSection.id, item, slot - 1)"
+                      :aria-label="`Marcar ${frutasSection.title} - ${item} intento ${slot}`"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Columna 2: Vegetales y Hidratos -->
+          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
+            <!-- Vegetales -->
+            <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1">
+              <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
+                <span class="text-lg print:text-[10px] leading-none">{{ vegetalesSection.icon }}</span>
+                <span
+                  class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
+                  :class="vegetalesSection.accent.badge"
+                >
+                  {{ vegetalesSection.title }}
+                </span>
+              </div>
+              <ul class="space-y-2 print:space-y-0">
+                <li
+                  v-for="item in vegetalesSection.items"
+                  :key="item"
+                  class="flex items-center justify-between gap-3 print:gap-1"
+                >
+                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                  <div class="flex gap-1 shrink-0 print:gap-0.5">
+                    <button
+                      v-for="slot in exposureSlots"
+                      :key="`${vegetalesSection.id}-${item}-${slot}`"
+                      type="button"
+                      class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
+                      :class="[
+                        getFillCount(vegetalesSection.id, item) >= slot
+                          ? vegetalesSection.accent.dot
+                          : 'border-slate-200 bg-white hover:border-slate-400',
+                      ]"
+                      @click="toggleCircle(vegetalesSection.id, item, slot - 1)"
+                      :aria-label="`Marcar ${vegetalesSection.title} - ${item} intento ${slot}`"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Hidratos -->
+            <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1">
+              <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
+                <span class="text-lg print:text-[10px] leading-none">{{ hidratosSection.icon }}</span>
+                <span
+                  class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
+                  :class="hidratosSection.accent.badge"
+                >
+                  {{ hidratosSection.title }}
+                </span>
+              </div>
+              <ul class="space-y-2 print:space-y-0">
+                <li
+                  v-for="item in hidratosSection.items"
+                  :key="item"
+                  class="flex items-center justify-between gap-3 print:gap-1"
+                >
+                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                  <div class="flex gap-1 shrink-0 print:gap-0.5">
+                    <button
+                      v-for="slot in exposureSlots"
+                      :key="`${hidratosSection.id}-${item}-${slot}`"
+                      type="button"
+                      class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
+                      :class="[
+                        getFillCount(hidratosSection.id, item) >= slot
+                          ? hidratosSection.accent.dot
+                          : 'border-slate-200 bg-white hover:border-slate-400',
+                      ]"
+                      @click="toggleCircle(hidratosSection.id, item, slot - 1)"
+                      :aria-label="`Marcar ${hidratosSection.title} - ${item} intento ${slot}`"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Columna 3: Proteínas y Lácteos -->
+          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
+            <section
+              v-for="section in [proteinasSection, lacteosSection]"
+              :key="section.id"
+              class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1"
+            >
+              <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
+                <span class="text-lg print:text-[10px] leading-none">{{ section.icon }}</span>
+                <span
+                  class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
+                  :class="section.accent.badge"
+                >
+                  {{ section.title }}
+                </span>
+              </div>
+              <ul class="space-y-2 print:space-y-0">
+                <li
+                  v-for="item in section.items"
+                  :key="item"
+                  class="flex items-center justify-between gap-3 print:gap-1"
+                >
+                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
+                  <div class="flex gap-1 shrink-0 print:gap-0.5">
+                    <button
+                      v-for="slot in exposureSlots"
+                      :key="`${section.id}-${item}-${slot}`"
+                      type="button"
+                      class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
+                      :class="[
+                        getFillCount(section.id, item) >= slot
+                          ? section.accent.dot
+                          : 'border-slate-200 bg-white hover:border-slate-400',
+                      ]"
+                      @click="toggleCircle(section.id, item, slot - 1)"
+                      :aria-label="`Marcar ${section.title} - ${item} intento ${slot}`"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Columna 4: Alérgenos y Otros Sabores -->
+          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
             <!-- Alérgenos -->
             <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1">
               <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
@@ -417,129 +580,6 @@ onMounted(() => {
                 </li>
               </ul>
             </div>
-          </div>
-
-          <!-- Columna 2: Frutas -->
-          <div class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1 self-start">
-            <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
-              <span class="text-lg print:text-[10px] leading-none">{{ frutasSection.icon }}</span>
-              <span
-                class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
-                :class="frutasSection.accent.badge"
-              >
-                {{ frutasSection.title }}
-              </span>
-            </div>
-            <ul class="space-y-2 print:space-y-0">
-              <li
-                v-for="item in frutasSection.items"
-                :key="item"
-                class="flex items-center justify-between gap-3 print:gap-1"
-              >
-                <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
-                <div class="flex gap-1 shrink-0 print:gap-0.5">
-                  <button
-                    v-for="slot in exposureSlots"
-                    :key="`${frutasSection.id}-${item}-${slot}`"
-                    type="button"
-                    class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
-                    :class="[
-                      getFillCount(frutasSection.id, item) >= slot
-                        ? frutasSection.accent.dot
-                        : 'border-slate-200 bg-white hover:border-slate-400',
-                    ]"
-                    @click="toggleCircle(frutasSection.id, item, slot - 1)"
-                    :aria-label="`Marcar ${frutasSection.title} - ${item} intento ${slot}`"
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna 3: Hidratos y Proteínas -->
-          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
-            <section
-              v-for="section in mainSections.slice(1, 3)"
-              :key="section.id"
-              class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1"
-            >
-              <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
-                <span class="text-lg print:text-[10px] leading-none">{{ section.icon }}</span>
-                <span
-                  class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
-                  :class="section.accent.badge"
-                >
-                  {{ section.title }}
-                </span>
-              </div>
-              <ul class="space-y-2 print:space-y-0">
-                <li
-                  v-for="item in section.items"
-                  :key="item"
-                  class="flex items-center justify-between gap-3 print:gap-1"
-                >
-                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
-                  <div class="flex gap-1 shrink-0 print:gap-0.5">
-                    <button
-                      v-for="slot in exposureSlots"
-                      :key="`${section.id}-${item}-${slot}`"
-                      type="button"
-                      class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
-                      :class="[
-                        getFillCount(section.id, item) >= slot
-                          ? section.accent.dot
-                          : 'border-slate-200 bg-white hover:border-slate-400',
-                      ]"
-                      @click="toggleCircle(section.id, item, slot - 1)"
-                      :aria-label="`Marcar ${section.title} - ${item} intento ${slot}`"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </section>
-          </div>
-
-          <!-- Columna 4: Vegetales y Lácteos -->
-          <div class="flex flex-col gap-3 sm:gap-4 print:gap-1 self-start">
-            <section
-              v-for="section in mainSections.slice(3)"
-              :key="section.id"
-              class="rounded-xl border border-slate-200 p-3 sm:p-4 print:p-1"
-            >
-              <div class="mb-3 flex items-center justify-center gap-2 print:mb-0.5">
-                <span class="text-lg print:text-[10px] leading-none">{{ section.icon }}</span>
-                <span
-                  class="inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide print:px-1 print:py-0.5 print:text-[7px] print:leading-none"
-                  :class="section.accent.badge"
-                >
-                  {{ section.title }}
-                </span>
-              </div>
-              <ul class="space-y-2 print:space-y-0">
-                <li
-                  v-for="item in section.items"
-                  :key="item"
-                  class="flex items-center justify-between gap-3 print:gap-1"
-                >
-                  <span class="text-sm font-medium text-slate-700 print:text-[7px]">{{ item }}</span>
-                  <div class="flex gap-1 shrink-0 print:gap-0.5">
-                    <button
-                      v-for="slot in exposureSlots"
-                      :key="`${section.id}-${item}-${slot}`"
-                      type="button"
-                      class="h-4 w-4 rounded-full border transition print:pointer-events-none print:h-2 print:w-2"
-                      :class="[
-                        getFillCount(section.id, item) >= slot
-                          ? section.accent.dot
-                          : 'border-slate-200 bg-white hover:border-slate-400',
-                      ]"
-                      @click="toggleCircle(section.id, item, slot - 1)"
-                      :aria-label="`Marcar ${section.title} - ${item} intento ${slot}`"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </section>
           </div>
         </div>
       </section>
