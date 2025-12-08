@@ -15,4 +15,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    // Ensure dev server handles SPA routing
+    fs: {
+      strict: false
+    }
+  },
+  preview: {
+    // Configure preview server for SPA routing
+    // Vite preview should handle SPA routing automatically
+  }
 })

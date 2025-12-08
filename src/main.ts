@@ -9,6 +9,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      path: '/',
+      redirect: '/primeros-alimentos',
+    },
+    {
       path: '/primeros-alimentos',
       name: 'primeros-alimentos',
       component: App,
@@ -17,10 +21,6 @@ const router = createRouter({
       path: '/first-food',
       name: 'first-food',
       component: App,
-    },
-    {
-      path: '/',
-      redirect: '/primeros-alimentos',
     },
   ],
 })

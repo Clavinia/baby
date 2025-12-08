@@ -6,3 +6,4 @@ export const slugify = (sectionId: string, label: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '')
 
+
