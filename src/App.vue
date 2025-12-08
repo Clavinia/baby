@@ -63,14 +63,17 @@ onMounted(() => {
 
 <template>
   <div class="relative min-h-screen bg-slate-100 py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-8 print:py-0 print:px-0 print:w-[297mm] print:h-[210mm] print:min-h-0 print:overflow-hidden">
-    <LanguageSwitcher />
-
     <PrintButton :on-print="handlePrint" />
 
     <!-- Header -->
-    <header class="mx-auto w-full max-w-[1400px] mb-4 sm:mb-6 md:mb-8 print:hidden px-4 sm:px-6 md:px-8">
-      <div class="text-left">
-        <h1 class="text-center text-2xl sm:text-3xl font-bold text-slate-800 mb-4 sm:mb-6">{{ t.header.title }}</h1>
+    <header class="mx-auto w-full max-w-[1400px] mb-4 sm:mb-6 md:mb-8 print:hidden">
+      <!-- Language switcher in corner -->
+      <div class="flex justify-center md:justify-end mb-4 sm:mb-6">
+        <LanguageSwitcher />
+      </div>
+      <!-- Title spanning full width -->
+      <div class="text-left px-4 sm:px-6 md:px-8">
+        <h1 class="text-center text-2xl sm:text-3xl font-bold text-slate-800 mb-4 sm:mb-6 w-full">{{ t.header.title }}</h1>
         <p class="text-xs sm:text-sm text-slate-600 max-w-[1400px] mx-auto mb-2 sm:mb-3">
           {{ t.header.description }}
         </p>
